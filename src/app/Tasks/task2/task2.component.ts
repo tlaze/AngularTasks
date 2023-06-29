@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-task2',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./task2.component.css']
 })
 export class Task2Component {
+
+  public todo: string = "";
+  
+  public items : string[] = [];
+
+  addItem():void{
+    this.items.push(this.todo);
+  }
+
+  removeItem(index:number):void{
+    this.items.splice(index,1);
+  }
 
 }

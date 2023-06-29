@@ -5,11 +5,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 
 import { HomepageComponent } from 'src/app/Home/homepage/homepage.component';
-import { Task1Component } from 'src/app/Tasks/task1/task1.component'; 
+import { Task1Component } from 'src/app/Tasks/task1/task1.component';
+import { Task2Component } from 'src/app/Tasks/task2/task2.component';
 
 const routes: Routes = [
   {path: "home", component: HomepageComponent},
   {path: "task1", component: Task1Component},
+  {path: "task2", component: Task2Component},
   {path: "**", component: HomepageComponent}
 ];
 
