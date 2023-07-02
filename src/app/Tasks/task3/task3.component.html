@@ -1,0 +1,27 @@
+<button routerLink="/home">Home</button>
+
+<br>
+<br>
+<br>
+    <label for="name">Name: </label>
+    <input type="text" [(ngModel)]="name">
+    <br>
+    <label for="email">Email: </label>
+    <input type="email"[(ngModel)]="email">
+    <br>
+    <label for="contact">Contact: </label>
+    <input type="text" [(ngModel)]="contact">
+    <br>
+    <label for="password">Password: </label>
+    <input type="password"[(ngModel)]="password">
+    <br>   
+    <button [disabled]="!name || email.indexOf('@')=== -1 || contact.length !=
+    10 || password.length < 8" (click)="submit()">Submit</button>
+
+<div *ngIf="validated">
+    <h2>Submitted Details:</h2>
+    <h5>Name: {{name}}</h5>
+    <h5>Email: {{email}}</h5>
+    <h5>Contact: {{contact}}</h5>
+    <h5>Password: {{password}}</h5>
+</div>
