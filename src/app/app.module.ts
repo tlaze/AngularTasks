@@ -20,7 +20,7 @@ import { Task6Component } from './Tasks/task6/task6.component';
     Task3Component,
     Task4Component,
     Task5Component,
-    Task6Component
+    Task6Component,
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,15 @@
-<p>task4 works!</p>
+<button routerLink="/home">Home</button>
+
+<h1>Product Search</h1>
+<input #product type="search" name="searchText" placeholder="Search Product" (input)="search(product.value)">
+
+<table>
+    <tr>
+        <th *ngFor="let column of headers">{{ column }}</th>
+    </tr>
+
+    <tr *ngFor="let product of filter">
+        <td>{{product.Name}}</td>
+        <td>${{product.Price}}</td>
+    </tr>
+</table>
