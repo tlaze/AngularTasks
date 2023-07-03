@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-import { HomepageComponent } from './Home/homepage/homepage.component';
+import { HttpClientModule } from '@angular/common/http';
 import { Task1Component } from './Tasks/task1/task1.component';
 import { Task2Component } from './Tasks/task2/task2.component';
 import { Task3Component } from './Tasks/task3/task3.component';
@@ -14,7 +14,6 @@ import { Task6Component } from './Tasks/task6/task6.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent,
     Task1Component,
     Task2Component,
     Task3Component,
@@ -25,6 +24,7 @@ import { Task6Component } from './Tasks/task6/task6.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [],

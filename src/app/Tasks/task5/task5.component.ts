@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class Task5Component {
 
+  file!: File
+  url: any;
+
+  selectFile(event:any){
+    this.file = <File> event.target.files[0];
+
+    const reader = new FileReader();
+    reader.readAsDataURL(this.file);
+
+    reader.onload = (_event) => {
+      this.url = reader.result
+    }
+  }
+
 }
